@@ -1,0 +1,19 @@
+# Compiled simulation output
+*.vvp
+sim.vvp
+
+# Waveform dumps (large binary files, regenerated on simulation)
+*.vcd
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
