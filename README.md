@@ -1,5 +1,8 @@
 # Verilog Beginner Lab
-
+![Verilog](https://img.shields.io/badge/Verilog-2005-blue.svg)
+![Simulator](https://img.shields.io/badge/Simulator-Icarus%20Verilog-orange.svg)
+![Labs](https://img.shields.io/badge/Labs-6-brightgreen.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 > **Six hands-on labs for learning digital design with Verilog — from logic gates to a 4-bit ALU.**  
 > Built for a **Computer Architecture Lab (CSE)** course using **Icarus Verilog** (`iverilog`) + **GTKWave**, with step-by-step testbenches and EDA Playground compatibility.
 
