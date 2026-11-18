@@ -13,7 +13,12 @@
 
 *Built for university Computer Architecture sessional courses — runs in the browser with EDA Playground or locally with Icarus Verilog.*
 
-[Getting Started](#-quick-start) • [Labs](#-labs-overview) • [Structure](#-repository-structure) • [How to Run](#-how-to-run) • [Learning Path](#-learning-path)
+[Quick Start](#quick-start) •
+[Labs](#labs-overview) •
+[Structure](#repository-structure) •
+[How to Run](#how-to-run) •
+[Documentation](#documentation) •
+[Learning Path](#learning-path)
 
 </div>
 
@@ -38,11 +43,11 @@ Every lab includes:
 - ✅ **Expected output log** (`expected_output.txt`)
 - ✅ **Waveform dump** (`dump.vcd`) for visual verification
 - ✅ A single **Python runner** (`run_all.py`) to simulate everything at once
-- ✅ **[Detailed lab notes](docs/)** with line-by-line explanations (Bengali)
+- ✅ **Detailed lab notes** (in [`docs/`](docs/)) with line-by-line explanations (Bengali)
 
 ---
 
-## 🚀 Quick Start (pick one)
+## Quick Start (pick one)<a name="quick-start"></a>
 
 ### 🌐 Option A — EDA Playground (zero install, best for class)
 
@@ -76,7 +81,7 @@ All six labs passed. Each folder now contains dump.vcd and simulation.log.
 
 ---
 
-## 📚 Labs Overview
+## Labs Overview<a name="labs-overview"></a>
 
 <table>
 <tr>
@@ -90,134 +95,102 @@ All six labs passed. Each folder now contains dump.vcd and simulation.log.
 
 <tr>
 <td align="center">01</td>
-<td><b>Logic Gates</b></td>
+<td><b><a href="01_logic_gates">Logic Gates</a></b></td>
 <td><code>logic_gates</code></td>
-<td>
-<sub>
-<code>assign</code>, dataflow modeling, AND/OR/NOT operators, first Verilog module
-</sub>
-</td>
+<td><sub><code>assign</code>, dataflow modeling, AND/OR/NOT, first Verilog module</sub></td>
 <td align="center">Combinational</td>
 <td align="center">3 × 1-bit</td>
 </tr>
 
 <tr>
 <td align="center">02</td>
-<td><b>Full Adder</b></td>
+<td><b><a href="02_full_adder">Full Adder</a></b></td>
 <td><code>full_adder</code></td>
-<td>
-<sub>
-XOR (<code>^</code>), carry-out logic, concatenation, <code>for</code>-loop testbench
-</sub>
-</td>
+<td><sub>XOR (<code>^</code>), carry-out, concatenation, <code>for</code>-loop testbench</sub></td>
 <td align="center">Combinational</td>
 <td align="center">sum + cout</td>
 </tr>
 
 <tr>
 <td align="center">03</td>
-<td><b>2-to-1 MUX</b></td>
+<td><b><a href="03_mux2">2-to-1 MUX</a></b></td>
 <td><code>mux2</code></td>
-<td>
-<sub>
-Ternary operator <code>?:</code>, conditional assignment, border-case testing
-</sub>
-</td>
+<td><sub>Ternary <code>?:</code>, conditional assignment, border-case testing</sub></td>
 <td align="center">Combinational</td>
 <td align="center">1-bit</td>
 </tr>
 
 <tr>
 <td align="center">04</td>
-<td><b>4-bit Register</b></td>
+<td><b><a href="04_register4">4-bit Register</a></b></td>
 <td><code>register4</code></td>
-<td>
-<sub>
-<b>First sequential circuit!</b> <code>posedge clk</code>, non-blocking <code><=</code>,
-synchronous reset, enable/hold, clock generator in testbench
-</sub>
-</td>
+<td><sub><b>First sequential circuit.</b> <code>posedge clk</code>, non-blocking <code>&lt;=</code>, sync reset, enable</sub></td>
 <td align="center">⭐ Sequential</td>
 <td align="center">4-bit bus</td>
 </tr>
 
 <tr>
 <td align="center">05</td>
-<td><b>4-bit Counter</b></td>
+<td><b><a href="05_counter4">4-bit Counter</a></b></td>
 <td><code>counter4</code></td>
-<td>
-<sub>
-Feedback incrementer, modulo-16 wrap-around, long test sequence, clock divider
-</sub>
-</td>
+<td><sub>Feedback incrementer, modulo-16 wrap-around, long test sequence, clock divider</sub></td>
 <td align="center">⭐ Sequential</td>
 <td align="center">4-bit bus</td>
 </tr>
 
 <tr>
 <td align="center">06</td>
-<td><b>4-bit ALU</b></td>
+<td><b><a href="06_alu4">4-bit ALU</a></b></td>
 <td><code>alu4</code></td>
-<td>
-<sub>
-<code>always @(*)</code>, <code>case</code> statement, ADD/SUB/AND/OR, overflow truncation, two's complement
-</sub>
-</td>
+<td><sub><code>always @(*)</code>, <code>case</code>, ADD/SUB/AND/OR, overflow, two's complement</sub></td>
 <td align="center">Combinational</td>
 <td align="center">4-bit result</td>
 </tr>
 </table>
 
+**📖 Lab notes (detailed, Bengali):** see the [`docs/`](docs/) folder.
+
 ---
 
-## 📂 Repository Structure
+## Repository Structure<a name="repository-structure"></a>
 
 ```
 Verilog-Beginner-Lab/
 │
-├── README.md                     ← You are here
-├── LICENSE                       ← MIT License
-├── .gitignore
-├── run_all.py                    ← One-command runner for all labs
+├── README.md                 ← You are here
+├── LICENSE                   ← MIT License
+├── .gitignore                ← Ignore build artifacts (*.vvp, *.vcd)
+├── run_all.py                ← One-command runner for all labs
 │
-├── 01_logic_gates/               ├── AND · OR · NOT
-│   ├── design.v
-│   ├── testbench.v
-│   ├── expected_output.txt
-│   └── dump.vcd                  (generated)
-│
-├── 02_full_adder/                ├── 1-bit full adder (sum + carry)
+├── 01_logic_gates/           ← Lab 1: AND · OR · NOT
 │   ├── design.v
 │   ├── testbench.v
 │   └── expected_output.txt
 │
-├── 03_mux2/                      ├── 2-to-1 multiplexer
+├── 02_full_adder/            ← Lab 2: 1-bit full adder
 │   └── ...
 │
-├── 04_register4/                 ├── 4-bit register (clocked)
-│   └── ...
+├── 03_mux2/                  ← Lab 3: 2-to-1 multiplexer
+├── 04_register4/             ← Lab 4: 4-bit register (clocked)
+├── 05_counter4/              ← Lab 5: 4-bit up counter (0→15→0)
+├── 06_alu4/                  ← Lab 6: 4-bit ALU (+, −, &, |)
 │
-├── 05_counter4/                  ├── 4-bit up counter (0→15→0)
-│   └── ...
-│
-├── 06_alu4/                      ├── 4-bit ALU (+, −, &, |)
-│   └── ...
-│
-└── docs/                         ← Detailed lab notes (Bengali)
-    ├── 00_Setup_Guide.md
+└── docs/                     ← Detailed lab notes (Bengali)
+    ├── 00_Setup_Guide.md     ← EDA Playground / Icarus install guide
     ├── Lab_01_Logic_Gates.md
     ├── Lab_02_Full_Adder.md
     ├── Lab_03_Mux2.md
     ├── Lab_04_Register4.md
     ├── Lab_05_Counter4.md
-    └── Lab_06_ALU4.md
+    ├── Lab_06_ALU4.md
+    └── screenshots/          ← Drop GTKWave / EPWave screenshots here
 ```
 
 ---
 
-## 🖥️ Sample Output
+## Sample Output
 
-Every testbench produces a clear pass/fail log:
+Every testbench produces a clear pass/fail log. For example, Lab 01:
 
 ```
 VCD info: dumpfile dump.vcd opened for output.
@@ -229,16 +202,11 @@ a b | AND OR NOT_a
 PASS: logic gates
 ```
 
-<div align="center">
-<img src="docs/screenshots/logic_gates_waveform.png" alt="Waveform preview" width="700">
-<p><sub><i>Waveform from Lab 01 (Logic Gates) — view in GTKWave or EPWave.</i></sub></p>
-</div>
-
-> 💡 To add your own screenshot, drop it at `docs/screenshots/logic_gates_waveform.png`.
+> 📸 Add your own EPWave/GTKWave screenshots into [`docs/screenshots/`](docs/screenshots/) and reference them from the lab notes.
 
 ---
 
-## 📐 Verilog Conventions Used
+## Verilog Conventions Used<a name="verilog-conventions"></a>
 
 | Concept | How we write it |
 |---|---|
@@ -252,7 +220,7 @@ PASS: logic gates
 
 ---
 
-## 🧰 Tools You'll Need
+## Tools You'll Need
 
 | Tool | Purpose | Install |
 |:---|---|---|
@@ -264,43 +232,83 @@ PASS: logic gates
 
 ---
 
-## 🛠️ Troubleshooting
+## How to Run (step by step)<a name="how-to-run"></a>
+
+### Step 1 — Pick an environment
+
+| Where | Best for |
+|---|---|
+| **EDA Playground** (browser) | Class lab, no install needed |
+| **Icarus + GTKWave local** | Home practice, offline work |
+
+### Step 2 — For EDA Playground (each lab)
+
+1. Click **New** to open a fresh playground
+2. Paste `testbench.v` code in the **left** editor panel
+3. Paste `design.v` code in the **right** editor panel
+4. Under **Tools & Simulators**, select **Icarus Verilog 12.0**
+5. Under **Run Options**, tick **☐ Open EPWave after run**
+6. Click **Run ▶**
+7. Scroll down to the **Log panel** to see PASS/FAIL
+8. In the EPWave popup (bottom-right corner):
+   - Click **Get Signals** → select **tb** scope → **Append All** → **Close**
+   - Use **Ctrl + mouse wheel** to zoom
+   - Click any signal line to drop a cursor and see values
+9. Repeat from step 1 for the next lab (or click **New**)
+
+### Step 3 — Verifying a successful run
+
+You should see:
+- ✅ No red compilation errors in the log
+- ✅ A line starting with `PASS:` (e.g. `PASS: logic gates`)
+- ✅ EPWave shows all signals toggling at expected times
+- ✅ `errors[31:0]` stays at 0 throughout the waveform
+
+### Step 4 — Run everything at once (local only)
+
+```bash
+python3 run_all.py
+```
+
+---
+
+## Troubleshooting
 
 <details>
 <summary><b>"Unknown module type" in EDA Playground</b></summary>
-
-The design module must be in its own file (right panel / `design.sv`). The testbench in the left panel imports it — it can't be in the same file.
+The design module must be in its own file (right panel / <code>design.sv</code>). The testbench in the left panel imports it — don't put both modules in one file.
 </details>
 
 <details>
 <summary><b>EPWave replaced my editor / I can't see the log</b></summary>
-
-Go to <b>Profile → Settings</b> and enable <i>"Open EPWave in a new browser window"</i>. Then click Run again — EPWave will pop up in a small corner window without replacing the editor.
+Go to <b>Profile → Settings</b> and enable <i>"Open EPWave in a new browser window"</i>. Then click Run again — EPWave pops up in a corner window without covering the editor.
 </details>
 
 <details>
-<summary><b>`iverilog: command not found`</b></summary>
-
-Icarus Verilog is not installed or not on your PATH. On Windows, add `C:\iverilog\bin` to System PATH and restart VS Code / terminal.
+<summary><b>"iverilog: command not found"</b> (local)</summary>
+Icarus Verilog isn't on your PATH. On Windows, add <code>C:\iverilog\bin</code> to System PATH and restart your terminal.
 </details>
 
 <details>
 <summary><b>Empty waveform / flat lines</b></summary>
-
-Make sure your testbench calls `$dumpfile("dump.vcd"); $dumpvars(0, tb);` inside the `initial begin` block. Our testbenches already include this.
+Make sure your testbench calls <code>$dumpfile("dump.vcd"); $dumpvars(0, tb);</code> inside the <code>initial begin</code> block. All our testbenches include this already.
 </details>
 
 <details>
-<summary><b>Inferred latch warning during synthesis</b></summary>
-
-You forgot the `default` branch in a `case` statement inside `always @*`, or omitted an `else` in a combinational `if`. Always assign the output in every path.
+<summary><b>"Inferred latch" warning during synthesis</b></summary>
+You forgot the <code>default</code> branch in a <code>case</code> statement inside <code>always @*</code>, or omitted an <code>else</code> in a combinational <code>if</code>. Always assign the output in every path.
 </details>
 
-> 👉 More issues and fixes in [`docs/00_Setup_Guide.md`](docs/00_Setup_Guide.md).
+<details>
+<summary><b>Waveform signals appear duplicated</b></summary>
+You clicked <b>Append All</b> more than once. Right-click a signal name and choose Delete, or close EPWave and run again.
+</details>
+
+> 👉 More detailed setup help: [`docs/00_Setup_Guide.md`](docs/00_Setup_Guide.md).
 
 ---
 
-## 🧠 Learning Path
+## Learning Path<a name="learning-path"></a>
 
 These six labs give you all the building blocks for a simple CPU:
 
@@ -329,52 +337,47 @@ These six labs give you all the building blocks for a simple CPU:
 
 ---
 
-## 📝 Documentation
+## Documentation<a name="documentation"></a>
 
-Detailed, line-by-line lab notes (Bengali) are available in the [`docs/`](docs/) folder:
+Detailed, line-by-line lab notes (Bengali) live in [`docs/`](docs/):
 
-- 📘 [`docs/00_Setup_Guide.md`](docs/00_Setup_Guide.md) — EDA Playground, Icarus install, troubleshooting
-- 📗 [`docs/Lab_01_Logic_Gates.md`](docs/Lab_01_Logic_Gates.md)
-- 📗 [`docs/Lab_02_Full_Adder.md`](docs/Lab_02_Full_Adder.md)
-- 📗 [`docs/Lab_03_Mux2.md`](docs/Lab_03_Mux2.md)
-- 📙 [`docs/Lab_04_Register4.md`](docs/Lab_04_Register4.md)
-- 📙 [`docs/Lab_05_Counter4.md`](docs/Lab_05_Counter4.md)
-- 📕 [`docs/Lab_06_ALU4.md`](docs/Lab_06_ALU4.md)
+| File | Contents |
+|---|---|
+| [`docs/00_Setup_Guide.md`](docs/00_Setup_Guide.md) | EDA Playground setup, Icarus install, troubleshooting |
+| [`docs/Lab_01_Logic_Gates.md`](docs/Lab_01_Logic_Gates.md) | AND/OR/NOT — first Verilog module |
+| [`docs/Lab_02_Full_Adder.md`](docs/Lab_02_Full_Adder.md) | Full adder, carry, XOR |
+| [`docs/Lab_03_Mux2.md`](docs/Lab_03_Mux2.md) | 2-to-1 multiplexer, ternary operator |
+| [`docs/Lab_04_Register4.md`](docs/Lab_04_Register4.md) | First sequential circuit, clock, `<=` |
+| [`docs/Lab_05_Counter4.md`](docs/Lab_05_Counter4.md) | Mod-16 counter, wrap-around |
+| [`docs/Lab_06_ALU4.md`](docs/Lab_06_ALU4.md) | Combinational ALU, case statement |
+| [`docs/screenshots/`](docs/screenshots/) | Drop waveform screenshots here |
 
-Each lab note contains:
-- 🎯 Objective & truth table / function table
-- 💻 Design code with line-by-line explanation
-- 🧪 Testbench walkthrough
-- 📊 Expected output
-- 📈 Waveform analysis (what to look for in GTKWave / EPWave)
-- ⚠️ Common mistakes
-- 💡 Extra practice exercises
-- 📝 Report writing guide
+Each lab note includes: objective, truth/function table, line-by-line code walkthrough, expected output, waveform analysis, common mistakes, extra practice, and a report-writing guide.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a teaching project — corrections, clarifications, and new labs are very welcome!
 
-- 🐛 **Found a bug?** Open an issue describing the lab + what went wrong.
-- ✨ **Want to add a lab?** (7-segment decoder, register file, UART, simple CPU, …) — fork, add the lab in the same `design.v` + `testbench.v` + `expected_output.txt` format, and open a PR.
-- 📖 **Improved explanations?** PRs for docs/ are appreciated.
-- 🌐 **Translation?** Lab notes in other languages welcome in `docs/<lang>/`.
+- 🐛 **Found a bug?** Open an issue with the lab number and what went wrong.
+- ✨ **Want to add a lab?** (7-segment decoder, register file, UART, simple CPU, …) — fork, add a folder following the same `design.v` + `testbench.v` + `expected_output.txt` pattern, and open a PR.
+- 📖 **Improved explanations?** PRs to `docs/` are appreciated.
+- 🌐 **Translations?** Place translated notes in `docs/<lang>/` (e.g. `docs/en/`, `docs/bn/`).
 
 ---
 
-## 👤 Author
+## Author
 
-**Md. Makshedul Islam** ([@MaksBloxX](https://github.com/MaksBloxX))
+**Md. Makshedul Islam** — [@MaksBloxX](https://github.com/MaksBloxX)
 
 Built as teaching material for a Computer Architecture sessional course. If these labs helped your coursework, a ⭐ on the repo is always appreciated!
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details. You're free to use, modify, and share this for educational or personal projects.
+This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE) for the full text. You're free to use, modify, and share this for educational or personal projects.
 
 <div align="center">
 <br>
