@@ -1,0 +1,72 @@
+$date
+	Wed Nov 18 09:31:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 4 ! result [3:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 2 $ op [1:0] $end
+$var integer 32 % errors [31:0] $end
+$scope module dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 2 ( op [1:0] $end
+$var reg 4 ) result [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1001 )
+b0 (
+b11 '
+b110 &
+b0 %
+b0 $
+b11 #
+b110 "
+b1001 !
+$end
+#10000
+b11 !
+b11 )
+b1 $
+b1 (
+#20000
+b10 !
+b10 )
+b10 $
+b10 (
+#30000
+b111 !
+b111 )
+b11 $
+b11 (
+#40000
+b0 !
+b0 )
+b0 $
+b0 (
+b1 #
+b1 '
+b1111 "
+b1111 &
+#50000
+b1110 !
+b1110 )
+b1 $
+b1 (
+b101 #
+b101 '
+b11 "
+b11 &
+#60000

@@ -1,0 +1,9 @@
+VCD info: dumpfile dump.vcd opened for output.
+6 + 3 = 9 (expected 9)
+6 - 3 = 3 (expected 3)
+6 AND 3 = 2 (expected 2)
+6 OR 3 = 7 (expected 7)
+15 + 1 = 0 (expected 0 in four bits)
+3 - 5 = 14 (expected 14 in unsigned four bits)
+PASS: ALU
+testbench.v:43: $finish called at 60000 (1ps)

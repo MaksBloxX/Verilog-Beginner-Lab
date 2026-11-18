@@ -1,0 +1,22 @@
+VCD info: dumpfile dump.vcd opened for output.
+Reset: count=0
+Clock 1: count=1 (expected 1)
+Clock 2: count=2 (expected 2)
+Clock 3: count=3 (expected 3)
+Clock 4: count=4 (expected 4)
+Clock 5: count=5 (expected 5)
+Clock 6: count=6 (expected 6)
+Clock 7: count=7 (expected 7)
+Clock 8: count=8 (expected 8)
+Clock 9: count=9 (expected 9)
+Clock 10: count=10 (expected 10)
+Clock 11: count=11 (expected 11)
+Clock 12: count=12 (expected 12)
+Clock 13: count=13 (expected 13)
+Clock 14: count=14 (expected 14)
+Clock 15: count=15 (expected 15)
+Clock 16: count=0 (expected 0)
+Clock 17: count=1 (expected 1)
+Clock 18: count=2 (expected 2)
+PASS: counter
+testbench.v:42: $finish called at 196000 (1ps)

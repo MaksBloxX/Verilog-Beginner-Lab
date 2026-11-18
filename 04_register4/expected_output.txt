@@ -1,0 +1,8 @@
+VCD info: dumpfile dump.vcd opened for output.
+Reset overrides enable: q=0 (expected 0)
+Load 10: q=10 (expected 10)
+Hold: q=10 (expected 10)
+Load 3: q=3 (expected 3)
+Synchronous reset: q=0 (expected 0)
+PASS: register
+testbench.v:59: $finish called at 46000 (1ps)

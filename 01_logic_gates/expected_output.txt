@@ -1,0 +1,8 @@
+VCD info: dumpfile dump.vcd opened for output.
+a b | AND OR NOT_a
+0 0 |  0   0    1
+0 1 |  0   1    1
+1 0 |  0   1    0
+1 1 |  1   1    0
+PASS: logic gates
+testbench.v:37: $finish called at 40000 (1ps)

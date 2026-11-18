@@ -1,0 +1,12 @@
+VCD info: dumpfile dump.vcd opened for output.
+a b cin | cout sum
+0 0  0  |   0   0
+0 0  1  |   0   1
+0 1  0  |   0   1
+0 1  1  |   1   0
+1 0  0  |   0   1
+1 0  1  |   1   0
+1 1  0  |   1   0
+1 1  1  |   1   1
+PASS: full adder
+testbench.v:29: $finish called at 80000 (1ps)
